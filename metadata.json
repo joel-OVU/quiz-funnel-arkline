@@ -1,0 +1,6 @@
+{
+  "name": "ARKLINE Developments | Free Decking Quote",
+  "description": "Mobile-first decking quote request questionnaire for award-winning ARKLINE Developments, serving Stourbridge and the West Midlands.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

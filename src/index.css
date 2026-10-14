@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bronze: #AD855C;
+    --color-cream: #F6F0EA;
+    --color-deep-brown: #362617;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+  }
+
+  body {
+    font-family: 'Space Mono', monospace;
+    line-height: 1.4;
+    background-color: var(--color-cream);
+    color: var(--color-deep-brown);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Halyard Micro', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-deep-brown);
+  }
+
+  button, input, select, textarea, label {
+    font-family: 'Space Mono', monospace;
+    line-height: 1.4;
+  }
+
+  /* Input text must be at least 16px to prevent iOS auto-zoom on focus */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+@layer utilities {
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: translateY(8px) scale(0.99);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .animate-step-transition {
+    animation: fadeInScale 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .font-heading {
+    font-family: 'Halyard Micro', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .font-mono-body {
+    font-family: 'Space Mono', monospace;
+    line-height: 1.4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
